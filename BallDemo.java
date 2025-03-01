@@ -65,8 +65,8 @@ public class BallDemo
         myCanvas.drawLine(rightWall, top, rightWall, ground);
         //myCanvas.drawLine(
         //(int xPos, int yPos, int ballDiameter, Color ballColor,
-                        //int groundPos, Canvas drawingCanvas)
-        boxBall box1 = new boxBall(70, 120, 20, Color.BLUE, ground, myCanvas);
+        //int groundPos, int topPos, int leftWallPos, int rightWallPos, Canvas drawingCanvas)
+        boxBall box1 = new boxBall(70, 120, 20, Color.BLUE, ground,top,leftWall, rightWall, myCanvas);
         box1.draw();
         
         while (!finished) {
