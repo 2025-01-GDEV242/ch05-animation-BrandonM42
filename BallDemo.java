@@ -58,6 +58,8 @@ public class BallDemo
         int top = 100;
         int leftWall = 50;
         int rightWall = 550;
+        int randomYPos = (int)((Math.random()*rightWall - 1)+ leftWall + 1);
+        int randomXPos = (int)((Math.random()*ground - 1)+ top + 1);
         boolean finished = false;
         myCanvas.drawLine(50, ground, 550, ground);
         myCanvas.drawLine(50, top, 550, top);
@@ -66,15 +68,18 @@ public class BallDemo
         //myCanvas.drawLine(
         //(int xPos, int yPos, int ballDiameter, Color ballColor,
         //int groundPos, int topPos, int leftWallPos, int rightWallPos, Canvas drawingCanvas)
-        boxBall box1 = new boxBall(70, 120, 20, Color.BLUE, ground,top,leftWall, rightWall, myCanvas);
+        boxBall box1 = new boxBall(randomXPos, randomYPos, 20, Color.BLUE, ground,top,leftWall, rightWall, myCanvas);
         box1.draw();
         
-        while (!finished) {
+        //makes ball bounce forever
+        while (!finished) 
+        {
             myCanvas.wait(25);           // small delay
             box1.move();
-            box1.move();
-            // stop once ball has travelled a certain distance on x axis
+            
         }
+        
+        
         
     }
 }

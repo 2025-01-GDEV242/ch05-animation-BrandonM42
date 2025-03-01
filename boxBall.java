@@ -32,8 +32,8 @@ public class boxBall
     private final int rightWallPosition;
     // y position of ground
     private Canvas canvas;
-    private int ySpeed = 5;
-    private int xSpeed = 6;
+    private int ySpeed = (int)(Math.random()*30) + 1;
+    private int xSpeed = (int)(Math.random()*30) + 1;
     // initial downward speed
 
     /**
